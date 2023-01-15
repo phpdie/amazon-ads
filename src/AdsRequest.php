@@ -16,6 +16,8 @@ class AdsRequest
 
     private $headers;
 
+    private $instance;
+
     /**
      * @param mixed $path
      */
@@ -66,6 +68,11 @@ class AdsRequest
         $this->headers = $headers;
     }
 
+    private function __clone()
+    {
+
+    }
+
     public function __construct($country_code, $client_id, $access_token)
     {
         $this->setCountryCode($country_code);
@@ -74,6 +81,14 @@ class AdsRequest
             'Authorization' => sprintf("Bearer %s", $access_token)
         ];
         $this->setHeaders($header);
+    }
+
+    public static function getInstance($country_code, $client_id, $access_token)
+    {
+        if (!empty(self::$instance) && self::$instance instanceof self) {
+            return self::$instance;
+        }
+        return new self($country_code, $client_id, $access_token);
     }
 
     public function sendRequest(string $path, array $param, array $body, $method = 'GET', $headers = [])
