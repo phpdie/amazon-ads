@@ -1,0 +1,23 @@
+{
+    "name": "phpdie/amazon-ads-api",
+    "description": "amazon-ads-api",
+    "type": "library",
+    "license": "Apache-2.0",
+    "autoload": {
+        "psr-4": {
+            "AmazonAdsApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "phpdie",
+            "email": "admin@phpdie.com"
+        }
+    ],
+    "require": {
+        "require": {
+            "php": ">=7.4",
+            "guzzlehttp/guzzle": "~6.0"
+        }
+    }
+}
