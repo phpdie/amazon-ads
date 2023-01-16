@@ -21,7 +21,12 @@ class Campaigns
     public function list($profileId, array $body = [])
     {
         $path = '/sp/campaigns/list';
-        return $this->instance->requestWithProfileId($profileId, $path, $body, 'POST');
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Campaigns/DeleteSponsoredProductsCampaigns
@@ -32,7 +37,12 @@ class Campaigns
     public function delete($profileId, array $body)
     {
         $path = '/sp/campaigns/delete';
-        return $this->instance->requestWithProfileId($profileId, $path, $body, 'POST');
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Campaigns/CreateSponsoredProductsCampaigns
@@ -43,7 +53,12 @@ class Campaigns
     public function create($profileId, array $body)
     {
         $path = '/sp/campaigns';
-        return $this->instance->requestWithProfileId($profileId, $path, $body, 'POST');
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Campaigns/UpdateSponsoredProductsCampaigns
@@ -54,6 +69,11 @@ class Campaigns
     public function update($profileId, array $body)
     {
         $path = '/sp/campaigns';
-        return $this->instance->requestWithProfileId($profileId, $path, $body, 'PUT');
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], $body, 'PUT', $headers);
     }
 }

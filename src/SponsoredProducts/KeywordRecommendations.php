@@ -20,6 +20,11 @@ class KeywordRecommendations
     public function  list($profileId)
     {
         $path = '/sp/targets/bid/recommendations';
-        return $this->instance->requestWithProfileId($profileId, $path, [], 'POST');
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spthemebasedbidrecommendation.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], [], 'POST', $headers);
     }
 }

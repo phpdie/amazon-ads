@@ -16,7 +16,7 @@ class AdsRequest
 
     private $headers;
 
-    private $instance;
+    private static $instance;
 
     /**
      * @param mixed $path
@@ -88,7 +88,8 @@ class AdsRequest
         if (!empty(self::$instance) && self::$instance instanceof self) {
             return self::$instance;
         }
-        return new self($country_code, $client_id, $access_token);
+        self::$instance = new self($country_code, $client_id, $access_token);
+        return self::$instance;
     }
 
     public function sendRequest(string $path, array $param, array $body, $method = 'GET', $headers = [])
@@ -105,15 +106,5 @@ class AdsRequest
         }
         $sendRequest = new Request($method, $uri, $requestHeaders, $body);
         return (new Client())->send($sendRequest)->getBody()->getContents();
-    }
-
-    public function requestWithProfileId($profileId, $path, $body, $method)
-    {
-        $headers = [
-            'Amazon-Advertising-API-Scope' => $profileId,
-            'Content-Type' => 'application/vnd.spCampaign.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
-        ];
-        return $this->sendRequest($path, [], $body, $method, $headers);
     }
 }

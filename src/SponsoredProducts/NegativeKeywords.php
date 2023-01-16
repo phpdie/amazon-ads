@@ -21,7 +21,12 @@ class NegativeKeywords
     public function  list($profileId, array $body = [])
     {
         $path = '/sp/negativeKeywords/list';
-        return $this->instance->requestWithProfileId($profileId, $path, $body, 'POST');
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/NegativeKeywords/DeleteSponsoredProductsNegativeKeywords
@@ -32,7 +37,12 @@ class NegativeKeywords
     public function delete($profileId, array $body)
     {
         $path = '/sp/negativeKeywords/delete';
-        return $this->instance->requestWithProfileId($profileId, $path, $body, 'POST');
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/NegativeKeywords/CreateSponsoredProductsNegativeKeywords
@@ -43,7 +53,12 @@ class NegativeKeywords
     public function create($profileId, array $body)
     {
         $path = '/sp/negativeKeywords';
-        return $this->instance->requestWithProfileId($profileId, $path, $body, 'POST');
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/NegativeKeywords/UpdateSponsoredProductsNegativeKeywords
@@ -54,6 +69,11 @@ class NegativeKeywords
     public function update($profileId, array $body)
     {
         $path = '/sp/negativeKeywords';
-        return $this->instance->requestWithProfileId($profileId, $path, $body, 'PUT');
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], $body, 'PUT', $headers);
     }
 }
