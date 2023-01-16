@@ -4,7 +4,7 @@ namespace AmazonAdsApi\SponsoredProducts;
 
 use AmazonAdsApi\AdsRequest;
 
-class KeywordRecommendations
+class ThemeBasedBidRecommendation
 {
     private AdsRequest $instance;
 
