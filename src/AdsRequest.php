@@ -106,4 +106,14 @@ class AdsRequest
         $sendRequest = new Request($method, $uri, $requestHeaders, $body);
         return (new Client())->send($sendRequest)->getBody()->getContents();
     }
+
+    public function requestWithProfileId($profileId, $path, $body, $method)
+    {
+        $headers = [
+            'Amazon-Advertising-API-Scope' => $profileId,
+            'Content-Type' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spCampaign.v3+json',
+        ];
+        return $this->sendRequest($path, [], $body, $method, $headers);
+    }
 }
