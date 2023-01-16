@@ -25,6 +25,6 @@ class KeywordRecommendations
             'Content-Type' => 'application/vnd.spthemebasedbidrecommendation.v3+json',
             'Accept' => 'application/vnd.spCampaign.v3+json',
         ];
-        return $this->sendRequest($path, [], [], 'POST', $headers);
+        return $this->instance->sendRequest($path, [], [], 'POST', $headers);
     }
 }

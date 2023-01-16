@@ -26,7 +26,7 @@ class NegativeKeywords
             'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaign.v3+json',
         ];
-        return $this->sendRequest($path, [], $body, 'POST', $headers);
+        return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/NegativeKeywords/DeleteSponsoredProductsNegativeKeywords
@@ -42,7 +42,7 @@ class NegativeKeywords
             'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaign.v3+json',
         ];
-        return $this->sendRequest($path, [], $body, 'POST', $headers);
+        return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/NegativeKeywords/CreateSponsoredProductsNegativeKeywords
@@ -58,7 +58,7 @@ class NegativeKeywords
             'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaign.v3+json',
         ];
-        return $this->sendRequest($path, [], $body, 'POST', $headers);
+        return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/NegativeKeywords/UpdateSponsoredProductsNegativeKeywords
@@ -74,6 +74,6 @@ class NegativeKeywords
             'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaign.v3+json',
         ];
-        return $this->sendRequest($path, [], $body, 'PUT', $headers);
+        return $this->instance->sendRequest($path, [], $body, 'PUT', $headers);
     }
 }

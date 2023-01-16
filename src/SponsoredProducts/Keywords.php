@@ -26,7 +26,7 @@ class Keywords
             'Content-Type' => 'application/vnd.spKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaign.v3+json',
         ];
-        return $this->sendRequest($path, [], $body, 'POST', $headers);
+        return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Keywords/DeleteSponsoredProductsKeywords
@@ -42,7 +42,7 @@ class Keywords
             'Content-Type' => 'application/vnd.spKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaign.v3+json',
         ];
-        return $this->sendRequest($path, [], $body, 'POST', $headers);
+        return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Keywords/CreateSponsoredProductsKeywords
@@ -58,7 +58,7 @@ class Keywords
             'Content-Type' => 'application/vnd.spKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaign.v3+json',
         ];
-        return $this->sendRequest($path, [], $body, 'POST', $headers);
+        return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Keywords/UpdateSponsoredProductsKeywords
@@ -74,6 +74,6 @@ class Keywords
             'Content-Type' => 'application/vnd.spKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaign.v3+json',
         ];
-        return $this->sendRequest($path, [], $body, 'PUT', $headers);
+        return $this->instance->sendRequest($path, [], $body, 'PUT', $headers);
     }
 }
