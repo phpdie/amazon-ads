@@ -24,7 +24,7 @@ class Keywords
         $headers = [
             'Amazon-Advertising-API-Scope' => $profileId,
             'Content-Type' => 'application/vnd.spKeyword.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spKeyword.v3+json',
         ];
         return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
@@ -40,7 +40,7 @@ class Keywords
         $headers = [
             'Amazon-Advertising-API-Scope' => $profileId,
             'Content-Type' => 'application/vnd.spKeyword.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spKeyword.v3+json',
         ];
         return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
@@ -56,7 +56,7 @@ class Keywords
         $headers = [
             'Amazon-Advertising-API-Scope' => $profileId,
             'Content-Type' => 'application/vnd.spKeyword.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spKeyword.v3+json',
         ];
         return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
@@ -72,7 +72,7 @@ class Keywords
         $headers = [
             'Amazon-Advertising-API-Scope' => $profileId,
             'Content-Type' => 'application/vnd.spKeyword.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spKeyword.v3+json',
         ];
         return $this->instance->sendRequest($path, [], $body, 'PUT', $headers);
     }

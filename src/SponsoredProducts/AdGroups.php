@@ -24,7 +24,7 @@ class AdGroups
         $headers = [
             'Amazon-Advertising-API-Scope' => $profileId,
             'Content-Type' => 'application/vnd.spAdGroup.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spAdGroup.v3+json',
         ];
         return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
@@ -40,7 +40,7 @@ class AdGroups
         $headers = [
             'Amazon-Advertising-API-Scope' => $profileId,
             'Content-Type' => 'application/vnd.spAdGroup.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spAdGroup.v3+json',
         ];
         return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
@@ -56,7 +56,7 @@ class AdGroups
         $headers = [
             'Amazon-Advertising-API-Scope' => $profileId,
             'Content-Type' => 'application/vnd.spAdGroup.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spAdGroup.v3+json',
         ];
         return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
@@ -72,7 +72,7 @@ class AdGroups
         $headers = [
             'Amazon-Advertising-API-Scope' => $profileId,
             'Content-Type' => 'application/vnd.spAdGroup.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spAdGroup.v3+json',
         ];
         return $this->instance->sendRequest($path, [], $body, 'PUT', $headers);
     }

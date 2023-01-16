@@ -23,7 +23,7 @@ class KeywordRecommendations
         $headers = [
             'Amazon-Advertising-API-Scope' => $profileId,
             'Content-Type' => 'application/vnd.spthemebasedbidrecommendation.v3+json',
-            'Accept' => 'application/vnd.spCampaign.v3+json',
+            'Accept' => 'application/vnd.spthemebasedbidrecommendation.v3+json',
         ];
         return $this->instance->sendRequest($path, [], [], 'POST', $headers);
     }
