@@ -103,7 +103,7 @@ class AdsRequest
         if ($headers) {
             $requestHeaders = array_merge($requestHeaders, $headers);
         }
-        $sendRequest = new Request($method, $uri, $param, $body, $requestHeaders);
+        $sendRequest = new Request($method, $uri, $requestHeaders, $body);
         return (new Client())->send($sendRequest)->getBody()->getContents();
     }
 }
