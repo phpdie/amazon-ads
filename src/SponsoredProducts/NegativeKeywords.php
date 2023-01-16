@@ -1,8 +1,8 @@
 <?php
 
-
 namespace AmazonAdsApi\SponsoredProducts;
 
+use AmazonAdsApi\AdsRequest;
 
 class NegativeKeywords
 {
