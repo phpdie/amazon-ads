@@ -16,7 +16,7 @@ class ThemeBasedBidRecommendation
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/ThemeBasedBidRecommendation/GetThemeBasedBidRecommendationForAdGroup_v1
      * @return mixed
      */
-    public function  list()
+    public function index()
     {
         $path = '/sp/targets/bid/recommendations';
         $headers = [

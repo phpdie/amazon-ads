@@ -16,7 +16,7 @@ class ConsolidatedRecommendations
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Consolidated%20Recommendations/getCampaignRecommendations
      * @return mixed
      */
-    public function list()
+    public function index()
     {
         $path = '/sp/campaign/recommendations';
         $headers = [

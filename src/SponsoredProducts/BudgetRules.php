@@ -113,7 +113,7 @@ class BudgetRules
      * @param array $param
      * @return mixed
      */
-    public function list(array $param)
+    public function index(array $param)
     {
         $path = '/sp/budgetRules';
         $headers = [

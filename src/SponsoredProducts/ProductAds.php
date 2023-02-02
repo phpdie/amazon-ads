@@ -17,7 +17,7 @@ class ProductAds
      * @param array $body
      * @return mixed
      */
-    public function  list(array $body = [])
+    public function index(array $body = [])
     {
         $path = '/sp/productAds/list';
         $headers = [

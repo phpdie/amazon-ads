@@ -17,7 +17,7 @@ class Campaigns
      * @param array $body
      * @return mixed
      */
-    public function list(array $body = [])
+    public function index(array $body = [])
     {
         $path = '/sp/campaigns/list';
         $headers = [

@@ -16,7 +16,7 @@ class BudgetRulesRecommendation
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/BudgetRulesRecommendation/SPGetBudgetRulesRecommendation
      * @return mixed
      */
-    public function list()
+    public function index()
     {
         $path = '/sp/campaigns/budgetRules/recommendations';
         $headers = [
