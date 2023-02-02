@@ -1,21 +1,21 @@
 {
-    "name": "phpdie/amazon-ads-api",
-    "description": "amazon-ads-api",
-    "type": "library",
-    "license": "Apache-2.0",
-    "autoload": {
-        "psr-4": {
-            "AmazonAdsApi\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "phpdie",
-            "email": "admin@phpdie.com"
-        }
-    ],
-    "require": {
-        "php": ">=7.4",
-        "guzzlehttp/guzzle": "~6.0"
+  "name": "phpdie/amazon-ads-api",
+  "description": "amazon-ads-api",
+  "type": "library",
+  "require": {
+    "php": ">=7.4",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "phpdie",
+      "email": "admin@phpdie.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "AmazonAdsApi\\": "src/"
+    }
+  }
 }
