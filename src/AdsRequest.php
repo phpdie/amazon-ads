@@ -91,8 +91,9 @@ class AdsRequest
 
     }
 
-    public function __construct($country_code, $client_id, $access_token)
+    public function __construct($profileId, $country_code, $client_id, $access_token)
     {
+        $this->setProfileId($profileId);
         $this->setCountryCode($country_code);
         $header = [
             'Amazon-Advertising-API-ClientId' => $client_id,
@@ -101,12 +102,12 @@ class AdsRequest
         $this->setHeaders($header);
     }
 
-    public static function getInstance($country_code, $client_id, $access_token)
+    public static function getInstance($profileId, $country_code, $client_id, $access_token)
     {
         if (!empty(self::$instance) && self::$instance instanceof self) {
             return self::$instance;
         }
-        self::$instance = new self($country_code, $client_id, $access_token);
+        self::$instance = new self($profileId, $country_code, $client_id, $access_token);
         return self::$instance;
     }
 
