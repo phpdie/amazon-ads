@@ -2,17 +2,10 @@
 
 namespace AmazonAdsApi\CommonResources\AdvertisingAccounts;
 
-use AmazonAdsApi\AdsRequest;
+use AmazonAdsApi\BaseModel;
 
-class ManagerAccount
+class ManagerAccount extends BaseModel
 {
-    private AdsRequest $instance;
-
-    public function __construct(AdsRequest $instance)
-    {
-        $this->instance = $instance;
-    }
-
     /** https://advertising.amazon.com/API/docs/en-us/reference/1-0/managerAccount#/Manager%20Accounts/UnlinkAdvertisingAccountsToManagerAccountPublicAPI
      * @param array $param
      * @param array $body
