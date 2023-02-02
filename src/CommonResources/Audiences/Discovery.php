@@ -1,6 +1,6 @@
 <?php
 
-namespace AmazonAdsApi\Audiences;
+namespace AmazonAdsApi\CommonResources\Audiences;
 
 use AmazonAdsApi\BaseModel;
 

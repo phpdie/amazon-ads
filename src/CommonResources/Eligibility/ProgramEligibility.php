@@ -1,6 +1,6 @@
 <?php
 
-namespace AmazonAdsApi\Eligibility;
+namespace AmazonAdsApi\CommonResources\Eligibility;
 
 use AmazonAdsApi\BaseModel;
 

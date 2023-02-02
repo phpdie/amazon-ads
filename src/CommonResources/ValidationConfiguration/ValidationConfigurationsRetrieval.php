@@ -1,6 +1,6 @@
 <?php
 
-namespace AmazonAdsApi\ValidationConfiguration;
+namespace AmazonAdsApi\CommonResources\ValidationConfiguration;
 
 use AmazonAdsApi\BaseModel;
 

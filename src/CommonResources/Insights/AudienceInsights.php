@@ -1,6 +1,6 @@
 <?php
 
-namespace AmazonAdsApi\Insights;
+namespace AmazonAdsApi\CommonResources\Insights;
 
 use AmazonAdsApi\BaseModel;
 

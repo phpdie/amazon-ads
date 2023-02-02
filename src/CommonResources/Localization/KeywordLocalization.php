@@ -1,6 +1,6 @@
 <?php
 
-namespace AmazonAdsApi\Localization;
+namespace AmazonAdsApi\CommonResources\Localization;
 
 use AmazonAdsApi\BaseModel;
 

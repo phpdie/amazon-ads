@@ -1,6 +1,6 @@
 <?php
 
-namespace AmazonAdsApi\ProductMetadata;
+namespace AmazonAdsApi\CommonResources\ProductMetadata;
 
 use AmazonAdsApi\BaseModel;
 

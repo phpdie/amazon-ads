@@ -1,6 +1,6 @@
 <?php
 
-namespace AmazonAdsApi\Billing;
+namespace AmazonAdsApi\CommonResources\Billing;
 
 use AmazonAdsApi\BaseModel;
 
