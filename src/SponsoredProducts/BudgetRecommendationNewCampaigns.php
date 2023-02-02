@@ -17,7 +17,7 @@ class BudgetRecommendationNewCampaigns
      * @param array $body
      * @return mixed
      */
-    public function index(array $body = [])
+    public function index(array $body)
     {
         $path = '/sp/campaigns/initialBudgetRecommendation';
         $headers = [

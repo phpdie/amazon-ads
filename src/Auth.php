@@ -8,7 +8,7 @@ use \GuzzleHttp\Client;
 
 class Auth
 {
-    public function getAuthUrl($country_code, $client_id, $redirect_uri, $state = 'State', $permission_scope = 'advertising::campaign_management')
+    public function getAuthUrl($client_id, $country_code, $redirect_uri, $state = 'State', $permission_scope = 'advertising::campaign_management')
     {
         $param = [
             'scope' => $permission_scope,
@@ -20,7 +20,7 @@ class Auth
         return Url::getUrl($country_code, 'auth_grant_url') . '?' . http_build_query($param);
     }
 
-    public function getAccessTokenByCode($country_code, $client_id, $client_secret, $code, $redirect_uri)
+    public function getAccessTokenByCode($client_id, $country_code, $client_secret, $code, $redirect_uri)
     {
         $param = [
             'client_id' => $client_id,
@@ -33,7 +33,7 @@ class Auth
         return (new Client())->request('POST', $url, ['form_params' => $param])->getBody()->getContents();
     }
 
-    public function getAccessTokenByRefreshToken($country_code, $client_id, $client_secret, $refresh_token)
+    public function getAccessTokenByRefreshToken($client_id, $country_code, $client_secret, $refresh_token)
     {
         $param = [
             'client_id' => $client_id,

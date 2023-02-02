@@ -91,7 +91,7 @@ class AdsRequest
 
     }
 
-    public function __construct($profileId, $country_code, $client_id, $access_token)
+    public function __construct($client_id, $country_code, $profileId, $access_token)
     {
         $this->setProfileId($profileId);
         $this->setCountryCode($country_code);
@@ -102,12 +102,12 @@ class AdsRequest
         $this->setHeaders($header);
     }
 
-    public static function getInstance($profileId, $country_code, $client_id, $access_token)
+    public static function getInstance($client_id, $country_code, $profileId, $access_token)
     {
         if (!empty(self::$instance) && self::$instance instanceof self) {
             return self::$instance;
         }
-        self::$instance = new self($profileId, $country_code, $client_id, $access_token);
+        self::$instance = new self($client_id, $country_code, $profileId, $access_token);
         return self::$instance;
     }
 
