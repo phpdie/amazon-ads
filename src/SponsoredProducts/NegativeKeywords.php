@@ -21,7 +21,7 @@ class NegativeKeywords
     {
         $path = '/sp/negativeKeywords/list';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spNegativeKeyword.v3+json',
         ];
@@ -36,7 +36,7 @@ class NegativeKeywords
     {
         $path = '/sp/negativeKeywords/delete';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spNegativeKeyword.v3+json',
         ];
@@ -51,7 +51,7 @@ class NegativeKeywords
     {
         $path = '/sp/negativeKeywords';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spNegativeKeyword.v3+json',
         ];
@@ -66,7 +66,7 @@ class NegativeKeywords
     {
         $path = '/sp/negativeKeywords';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spNegativeKeyword.v3+json',
         ];

@@ -21,7 +21,7 @@ class BudgetRecommendationNewCampaigns
     {
         $path = '/sp/campaigns/initialBudgetRecommendation';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spinitialbudgetrecommendation.v3.4+json',
             'Accept' => 'application/vnd.spinitialbudgetrecommendation.v3.4+json',
         ];

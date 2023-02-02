@@ -21,7 +21,7 @@ class TargetingClauses
     {
         $path = '/sp/targets/list';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spTargetingClause.v3+json',
             'Accept' => 'application/vnd.spTargetingClause.v3+json',
         ];
@@ -36,7 +36,7 @@ class TargetingClauses
     {
         $path = '/sp/targets/delete';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spTargetingClause.v3+json',
             'Accept' => 'application/vnd.spTargetingClause.v3+json',
         ];
@@ -51,7 +51,7 @@ class TargetingClauses
     {
         $path = '/sp/targets';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spTargetingClause.v3+json',
             'Accept' => 'application/vnd.spTargetingClause.v3+json',
         ];
@@ -66,7 +66,7 @@ class TargetingClauses
     {
         $path = '/sp/targets';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spTargetingClause.v3+json',
             'Accept' => 'application/vnd.spTargetingClause.v3+json',
         ];

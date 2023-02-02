@@ -20,7 +20,7 @@ class Profiles
     {
         $path = '/v2/profiles';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, [], [], 'GET', $headers);
     }
@@ -33,7 +33,7 @@ class Profiles
     {
         $path = '/v2/profiles';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, [], $body, 'PUT', $headers);
     }

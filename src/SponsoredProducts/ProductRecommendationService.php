@@ -21,7 +21,7 @@ class ProductRecommendationService
     {
         $path = '/sp/targets/products/recommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spproductrecommendation.v3+json',
             'Accept' => 'application/vnd.spproductrecommendationresponse.asins.v3+json',
         ];

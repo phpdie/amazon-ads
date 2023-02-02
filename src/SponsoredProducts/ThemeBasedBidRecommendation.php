@@ -20,7 +20,7 @@ class ThemeBasedBidRecommendation
     {
         $path = '/sp/targets/bid/recommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spthemebasedbidrecommendation.v3+json',
             'Accept' => 'application/vnd.spthemebasedbidrecommendation.v3+json',
         ];

@@ -20,7 +20,7 @@ class ConsolidatedRecommendations
     {
         $path = '/sp/campaign/recommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Accept' => 'application/vnd.spgetcampaignrecommendationsresponse.v1+json',
         ];
         return $this->instance->sendRequest($path, [], [], 'GET', $headers);

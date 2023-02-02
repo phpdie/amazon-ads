@@ -21,7 +21,7 @@ class CampaignNegativeKeywords
     {
         $path = '/sp/campaignNegativeKeywords/list';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
         ];
@@ -36,7 +36,7 @@ class CampaignNegativeKeywords
     {
         $path = '/sp/campaignNegativeKeywords/delete';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
         ];
@@ -51,7 +51,7 @@ class CampaignNegativeKeywords
     {
         $path = '/sp/campaignNegativeKeywords';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
         ];
@@ -66,7 +66,7 @@ class CampaignNegativeKeywords
     {
         $path = '/sp/campaignNegativeKeywords';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
         ];

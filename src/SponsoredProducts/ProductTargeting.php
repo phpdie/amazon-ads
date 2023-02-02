@@ -21,7 +21,7 @@ class ProductTargeting
     {
         $path = '/sp/targets/products/count';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spproducttargeting.v3+json',
             'Accept' => 'application/vnd.spproducttargetingresponse.v3+json',
         ];
@@ -35,7 +35,7 @@ class ProductTargeting
     {
         $path = '/sp/targets/products/count';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Accept' => 'application/vnd.spproducttargetingresponse.v3+json',
         ];
         return $this->instance->sendRequest($path, [], [], 'GET', $headers);
@@ -49,7 +49,7 @@ class ProductTargeting
     {
         $path = '/sp/negativeTargets/brands/search';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spproducttargeting.v3+json',
             'Accept' => 'application/vnd.spproducttargetingresponse.v3+json',
         ];
@@ -66,7 +66,7 @@ class ProductTargeting
         $categoryId = $param['categoryId'];
         $path = str_replace('{categoryId}', $categoryId, $path);
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Accept' => 'application/vnd.spproducttargetingresponse.v3+json',
         ];
         return $this->instance->sendRequest($path, $param, [], 'GET', $headers);
@@ -80,7 +80,7 @@ class ProductTargeting
     {
         $path = '/sp/targets/categories/recommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spproducttargeting.v3+json',
             'Accept' => 'application/vnd.spproducttargetingresponse.v3+json',
         ];
@@ -94,7 +94,7 @@ class ProductTargeting
     {
         $path = '/sp/negativeTargets/brands/recommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Accept' => 'application/vnd.spproducttargetingresponse.v3+json',
         ];
         return $this->instance->sendRequest($path, [], [], 'GET', $headers);

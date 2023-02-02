@@ -21,7 +21,7 @@ class BudgetUsage
     {
         $path = '/sp/campaigns/budget/usage';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spcampaignbudgetusage.v1+json',
             'Accept' => 'application/vnd.spcampaignbudgetusage.v1+json',
         ];

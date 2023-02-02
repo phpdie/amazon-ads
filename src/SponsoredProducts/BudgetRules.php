@@ -25,7 +25,7 @@ class BudgetRules
         $path = str_replace('{budgetRuleId}', $budgetRuleId, $path);
         unset($param['budgetRuleId']);
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, $param, [], 'GET', $headers);
     }
@@ -42,7 +42,7 @@ class BudgetRules
         unset($param['campaignId']);
         $path = str_replace('{campaignId}', $campaignId, $path);
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, $param, $body, 'POST', $headers);
     }
@@ -58,7 +58,7 @@ class BudgetRules
         unset($param['campaignId']);
         $path = str_replace('{campaignId}', $campaignId, $path);
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, [], [], 'GET', $headers);
     }
@@ -75,7 +75,7 @@ class BudgetRules
         $budgetRuleId = $param['budgetRuleId'];
         $path = str_replace(['{campaignId}', '{budgetRuleId}'], [$campaignId, $budgetRuleId], $path);
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, [], [], 'DELETE', $headers);
     }
@@ -91,7 +91,7 @@ class BudgetRules
         $path = str_replace('{campaignId}', $campaignId, $path);
         unset($param['campaignId']);
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, $param, [], 'GET', $headers);
     }
@@ -104,7 +104,7 @@ class BudgetRules
     {
         $path = '/sp/budgetRules';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, [], $body, 'POST', $headers);
     }
@@ -117,7 +117,7 @@ class BudgetRules
     {
         $path = '/sp/budgetRules';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, $param, [], 'GET', $headers);
     }
@@ -130,7 +130,7 @@ class BudgetRules
     {
         $path = '/sp/budgetRules';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, [], $body, 'PUT', $headers);
     }
@@ -145,7 +145,7 @@ class BudgetRules
         $budgetRuleId = $param['budgetRuleId'];
         $path = str_replace('{budgetRuleId}', $budgetRuleId, $path);
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
         ];
         return $this->instance->sendRequest($path, [], [], 'GET', $headers);
     }

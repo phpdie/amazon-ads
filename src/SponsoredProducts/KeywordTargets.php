@@ -20,7 +20,7 @@ class KeywordTargets
     {
         $path = '/sp/targets/keywords/recommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spkeywordsrecommendation.v3+json',
             'Accept' => 'application/vnd.spkeywordsrecommendation.v3+json',
         ];

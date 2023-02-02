@@ -20,7 +20,7 @@ class BudgetRulesRecommendation
     {
         $path = '/sp/campaigns/budgetRules/recommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
+            'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
             'Content-Type' => 'application/vnd.spbudgetrulesrecommendation.v3+json',
             'Accept' => 'application/vnd.spbudgetrulesrecommendation.v3+json',
         ];
