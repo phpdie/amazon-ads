@@ -11,7 +11,7 @@ class Discovery extends BaseModel
      * @param array $body
      * @return mixed
      */
-    public function audienceSegments(array $param, array $body = [])
+    public function audienceSegments(array $param = [], array $body = ['adType' => 'SD'])
     {
         $path = '/audiences/list';
         $headers = [
@@ -25,7 +25,7 @@ class Discovery extends BaseModel
      * @param array $body
      * @return mixed
      */
-    public function audienceCategories(array $param, array $body)
+    public function audienceCategories(array $param = [], array $body = ['adType' => 'SD'])
     {
         $path = '/audiences/taxonomy/list';
         $headers = [
