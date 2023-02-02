@@ -2,17 +2,10 @@
 
 namespace AmazonAdsApi\CommonResources\AdvertisingAccounts;
 
-use AmazonAdsApi\AdsRequest;
+use AmazonAdsApi\BaseModel;
 
-class Profiles
+class Profiles extends BaseModel
 {
-    private AdsRequest $instance;
-
-    public function __construct(AdsRequest $instance)
-    {
-        $this->instance = $instance;
-    }
-
     /** https://advertising.amazon.com/API/docs/en-us/reference/2/profiles#/Profiles/listProfiles
      * @return mixed
      */

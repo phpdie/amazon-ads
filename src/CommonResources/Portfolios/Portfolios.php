@@ -1,7 +1,10 @@
 <?php
 
+namespace AmazonAdsApi\CommonResources\Portfolios;
 
-class Portfolios
+use AmazonAdsApi\BaseModel;
+
+class Portfolios extends BaseModel
 {
-
+    
 }

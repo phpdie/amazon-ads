@@ -2,17 +2,10 @@
 
 namespace AmazonAdsApi\SponsoredProducts;
 
-use AmazonAdsApi\AdsRequest;
+use AmazonAdsApi\BaseModel;
 
-class ProductRecommendationService
+class ProductRecommendationService extends BaseModel
 {
-    private AdsRequest $instance;
-
-    public function __construct(AdsRequest $instance)
-    {
-        $this->instance = $instance;
-    }
-
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Product%20Recommendation%20Service/getProductRecommendations
      * @param array $body
      * @return mixed
