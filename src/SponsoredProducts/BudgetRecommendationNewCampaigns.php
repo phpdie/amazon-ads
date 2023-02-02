@@ -2,17 +2,10 @@
 
 namespace AmazonAdsApi\SponsoredProducts;
 
-use AmazonAdsApi\AdsRequest;
+use AmazonAdsApi\BaseModel;
 
-class BudgetRecommendationNewCampaigns
+class BudgetRecommendationNewCampaigns extends BaseModel
 {
-    private AdsRequest $instance;
-
-    public function __construct(AdsRequest $instance)
-    {
-        $this->instance = $instance;
-    }
-
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Budget%20Recommendation%20New%20Campaigns/getBudgetRecommendation
      * @param array $body
      * @return mixed
