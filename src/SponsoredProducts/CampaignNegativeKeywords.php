@@ -14,15 +14,14 @@ class CampaignNegativeKeywords
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/CampaignNegativeKeywords/ListSponsoredProductsCampaignNegativeKeywords
-     * @param $profileId
      * @param array $body
      * @return mixed
      */
-    public function list($profileId, array $body = [])
+    public function list(array $body = [])
     {
         $path = '/sp/campaignNegativeKeywords/list';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $profileId,
+            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
             'Content-Type' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
         ];
@@ -30,15 +29,14 @@ class CampaignNegativeKeywords
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/CampaignNegativeKeywords/DeleteSponsoredProductsCampaignNegativeKeywords
-     * @param $profileId
      * @param array $body
      * @return mixed
      */
-    public function delete($profileId, array $body)
+    public function delete(array $body)
     {
         $path = '/sp/campaignNegativeKeywords/delete';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $profileId,
+            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
             'Content-Type' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
         ];
@@ -46,15 +44,14 @@ class CampaignNegativeKeywords
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/CampaignNegativeKeywords/CreateSponsoredProductsCampaignNegativeKeywords
-     * @param $profileId
      * @param array $body
      * @return mixed
      */
-    public function create($profileId, array $body)
+    public function create(array $body)
     {
         $path = '/sp/campaignNegativeKeywords';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $profileId,
+            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
             'Content-Type' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
         ];
@@ -62,15 +59,14 @@ class CampaignNegativeKeywords
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/CampaignNegativeKeywords/UpdateSponsoredProductsCampaignNegativeKeywords
-     * @param $profileId
      * @param array $body
      * @return mixed
      */
-    public function update($profileId, array $body)
+    public function update(array $body)
     {
         $path = '/sp/campaignNegativeKeywords';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $profileId,
+            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
             'Content-Type' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
             'Accept' => 'application/vnd.spCampaignNegativeKeyword.v3+json',
         ];

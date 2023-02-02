@@ -14,14 +14,13 @@ class ThemeBasedBidRecommendation
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/ThemeBasedBidRecommendation/GetThemeBasedBidRecommendationForAdGroup_v1
-     * @param $profileId
      * @return mixed
      */
-    public function  list($profileId)
+    public function  list()
     {
         $path = '/sp/targets/bid/recommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $profileId,
+            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
             'Content-Type' => 'application/vnd.spthemebasedbidrecommendation.v3+json',
             'Accept' => 'application/vnd.spthemebasedbidrecommendation.v3+json',
         ];

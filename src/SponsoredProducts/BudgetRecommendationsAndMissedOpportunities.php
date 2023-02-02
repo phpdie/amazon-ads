@@ -14,15 +14,14 @@ class BudgetRecommendationsAndMissedOpportunities
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/Budget%20recommendations%20and%20missed%20opportunities/getBudgetRecommendations
-     * @param $profileId
      * @param array $body
      * @return mixed
      */
-    public function list($profileId, array $body)
+    public function list( array $body)
     {
         $path = '/sp/campaigns/budgetRecommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $profileId,
+            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
             'Content-Type' => 'application/vnd.budgetrecommendation.v3+json',
             'Accept' => 'application/vnd.budgetrecommendation.v3+json',
         ];

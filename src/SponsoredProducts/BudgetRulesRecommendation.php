@@ -14,14 +14,13 @@ class BudgetRulesRecommendation
     }
 
     /** https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#/BudgetRulesRecommendation/SPGetBudgetRulesRecommendation
-     * @param $profileId
      * @return mixed
      */
-    public function list($profileId)
+    public function list()
     {
         $path = '/sp/campaigns/budgetRules/recommendations';
         $headers = [
-            'Amazon-Advertising-API-Scope' => $profileId,
+            'Amazon-Advertising-API-Scope' => $this->getProfileId(),
             'Content-Type' => 'application/vnd.spbudgetrulesrecommendation.v3+json',
             'Accept' => 'application/vnd.spbudgetrulesrecommendation.v3+json',
         ];

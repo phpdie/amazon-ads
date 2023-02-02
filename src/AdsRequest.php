@@ -16,6 +16,8 @@ class AdsRequest
 
     private $headers;
 
+    private $profileId;
+
     private static $instance;
 
     /**
@@ -66,6 +68,22 @@ class AdsRequest
     private function setHeaders($headers)
     {
         $this->headers = $headers;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProfileId()
+    {
+        return $this->profileId;
+    }
+
+    /**
+     * @param mixed $profileId
+     */
+    public function setProfileId($profileId): void
+    {
+        $this->profileId = $profileId;
     }
 
     private function __clone()
