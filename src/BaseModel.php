@@ -2,7 +2,7 @@
 
 namespace AmazonAdsApi;
 
-use AdsRequest;
+use AmazonAdsApi\AdsRequest;
 
 class BaseModel
 {
