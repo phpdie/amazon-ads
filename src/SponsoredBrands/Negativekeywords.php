@@ -10,7 +10,7 @@ class Negativekeywords extends BaseModel
      * @param array $param
      * @return mixed
      */
-    public function index(array $param)
+    public function index(array $param = [])
     {
         $path = '/sb/negativeKeywords';
         $headers = [

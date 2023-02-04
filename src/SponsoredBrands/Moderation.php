@@ -1,6 +1,6 @@
 <?php
 
-namespace AmazonAdsApi\SponsoredProducts;
+namespace AmazonAdsApi\SponsoredBrands;
 
 use AmazonAdsApi\BaseModel;
 
