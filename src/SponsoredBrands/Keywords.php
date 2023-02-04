@@ -10,7 +10,7 @@ class Keywords extends BaseModel
      * @param array $param
      * @return mixed
      */
-    public function index(array $param)
+    public function index(array $param = [])
     {
         $path = '/sb/keywords';
         $headers = [
@@ -45,8 +45,6 @@ class Keywords extends BaseModel
         $path = str_replace('{keywordId}', $keywordId, $path);
         $headers = [
             'Amazon-Advertising-API-Scope' => $this->instance->getProfileId(),
-            'Content-Type' => '',
-            'Accept' => '',
         ];
         return $this->instance->sendRequest($path, $param, [], 'DELETE', $headers);
     }
