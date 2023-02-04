@@ -14,6 +14,8 @@ class Reports extends BaseModel
     public function index(array $param, array $body)
     {
         $recordType = $param['recordType'];
+        $reportDate = $body['reportDate'];
+        $metrics = $body['metrics'];
         $path = '/v2/hsa/{recordType}/report';
         $path = str_replace('{recordType}', $recordType, $path);
         $headers = [
