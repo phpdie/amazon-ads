@@ -2,8 +2,6 @@
 
 namespace AmazonAdsApi;
 
-use AmazonAdsApi\AdsRequest;
-
 class BaseModel
 {
     protected AdsRequest $instance;

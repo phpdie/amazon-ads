@@ -1,9 +1,7 @@
 <?php
 
-
 namespace AmazonAdsApi;
 
-use AmazonAdsApi\Url;
 use \GuzzleHttp\Client;
 
 class Auth
