@@ -4,7 +4,7 @@ namespace AmazonAdsApi;
 
 class Helper
 {
-    public static function saveReportFile(string $url, string $save_directory)
+    public static function saveReportFile(string $url, string $save_directory = '')
     {
         $opts = [
             'ssl' => [
@@ -13,8 +13,12 @@ class Helper
             ],
         ];
         $context = stream_context_create($opts);
-        $target = $save_directory . DIRECTORY_SEPARATOR . pathinfo($url, PATHINFO_FILENAME) . '.gz';
-        return file_put_contents($target, file_get_contents($url, false, $context));
+        if ($save_directory) {
+            $save_directory = $save_directory . DIRECTORY_SEPARATOR;
+        }
+        $target = $save_directory . pathinfo($url, PATHINFO_FILENAME) . '.gz';
+        file_put_contents($target, file_get_contents($url, false, $context));
+        return $target;
     }
 
     public static function readReportFile(string $file_path)
