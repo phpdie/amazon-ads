@@ -32,4 +32,13 @@ class Helper
         gzclose($file);
         return json_decode($str, true);
     }
+
+    public static function getReportDataFromUrl(string $url)
+    {
+        $file_path = sys_get_temp_dir() . DIRECTORY_SEPARATOR . pathinfo($url, PATHINFO_FILENAME) . '.gz';
+        $target = self::saveReportFile($url, $file_path);
+        $context = self::readReportFile($target);
+        @unlink($file_path);
+        return $context;
+    }
 }
