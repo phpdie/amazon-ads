@@ -35,10 +35,9 @@ class Helper
 
     public static function getReportDataFromUrl(string $url)
     {
-        $file_path = sys_get_temp_dir() . DIRECTORY_SEPARATOR . pathinfo($url, PATHINFO_FILENAME) . '.gz';
-        $target = self::saveReportFile($url, $file_path);
+        $target = self::saveReportFile($url, sys_get_temp_dir());
         $context = self::readReportFile($target);
-        @unlink($file_path);
+        @unlink($target);
         return $context;
     }
 }
