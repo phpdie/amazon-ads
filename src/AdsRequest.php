@@ -7,10 +7,6 @@ use GuzzleHttp\Client;
 
 class AdsRequest
 {
-    private $path;
-
-    private $url;
-
     private $country_code;
 
     private $headers;
@@ -20,37 +16,11 @@ class AdsRequest
     private static $instance;
 
     /**
-     * @param mixed $path
-     */
-    private function setPath($path)
-    {
-        $this->path = $path;
-        $this->setUrl($this->getUrl() . '' . $path);
-    }
-
-    /**
-     * @return mixed
-     */
-    private function getUrl()
-    {
-        return $this->url;
-    }
-
-    /**
-     * @param mixed $url
-     */
-    private function setUrl($url)
-    {
-        $this->url = $url;
-    }
-
-    /**
      * @param mixed $country_code
      */
     private function setCountryCode($country_code)
     {
         $this->country_code = $country_code;
-        $this->setUrl(Url::getUrl($country_code, 'api_url'));
     }
 
     /**
@@ -87,7 +57,6 @@ class AdsRequest
 
     private function __clone()
     {
-
     }
 
     public function __construct($client_id, $country_code, $profileId, $access_token)
@@ -113,8 +82,7 @@ class AdsRequest
     public function sendRequest(string $path, array $param, array $body, $method = 'GET', $headers = [])
     {
         $method = strtoupper(trim($method));
-        $this->setPath($path);
-        $uri = $this->getUrl();
+        $uri = Url::getUrl($this->country_code, 'api_url') . $path;
         $uri .= $param ? '?' . http_build_query($param) : '';
         $body = $body ? json_encode($body) : null;
 
