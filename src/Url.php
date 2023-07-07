@@ -46,6 +46,9 @@ class Url
         'SG' => 'FE',
         'AU' => 'FE',
         'JP' => 'FE',
+
+        //compatible United Kingdom
+        'GB' => 'EU',
     ];
 
     public static function getUrl($country_code, $type = 'api_url')
