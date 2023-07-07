@@ -1,10 +1,6 @@
 <?php
 
-
 namespace AmazonAdsApi;
-
-
-use http\Exception\InvalidArgumentException;
 
 class Url
 {
@@ -56,10 +52,10 @@ class Url
     {
         $country_code_identifiers = self::COUNTRY_CODE_IDENTIFIERS[$country_code];
         if (empty($country_code_identifiers)) {
-            throw new InvalidArgumentException('bad argument country_code');
+            throw new \InvalidArgumentException('bad argument country_code');
         }
         if (!in_array($type, ['api_url', 'auth_grant_url', 'token_url'])) {
-            throw new InvalidArgumentException('bad argument type');
+            throw new \InvalidArgumentException('bad argument type');
         }
         return self::MAPPING[$country_code_identifiers][$type];
     }
