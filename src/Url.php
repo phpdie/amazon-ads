@@ -33,6 +33,8 @@ class Url
         //differ SP-API: https://developer-docs.amazon.com/sp-api/docs/marketplace-ids
         'ES' => 'EU',
         'UK' => 'EU',
+        //compatible United Kingdom
+        'GB' => 'EU',
         'FR' => 'EU',
         'NL' => 'EU',
         'DE' => 'EU',
@@ -41,14 +43,14 @@ class Url
         'EG' => 'EU',
         'TR' => 'EU',
         'SA' => 'EU',
+        'SE' => 'EU',
         'AE' => 'EU',
+        'BE' => 'EU',
+        'IN' => 'EU',
         //Far East
         'SG' => 'FE',
         'AU' => 'FE',
         'JP' => 'FE',
-
-        //compatible United Kingdom
-        'GB' => 'EU',
     ];
 
     public static function getUrl($country_code, $type = 'api_url')
