@@ -2,7 +2,7 @@
 
 namespace AmazonAdsApi;
 
-use \GuzzleHttp\Client;
+use GuzzleHttp\Client;
 
 class Auth
 {
