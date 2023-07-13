@@ -70,10 +70,12 @@ class AdsRequest
         $this->setHeaders($header);
     }
 
-    public static function getInstance($client_id, $country_code, $profileId, $access_token)
+    public static function getInstance($client_id, $country_code, $profileId, $access_token, bool $newInstance = false)
     {
-        if (!empty(self::$instance) && self::$instance instanceof self) {
-            return self::$instance;
+        if ($newInstance) {
+            if (!empty(self::$instance) && self::$instance instanceof self) {
+                return self::$instance;
+            }
         }
         self::$instance = new self($client_id, $country_code, $profileId, $access_token);
         return self::$instance;
