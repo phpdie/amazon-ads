@@ -28,7 +28,7 @@ class Auth
             'redirect_uri' => $redirect_uri,
         ];
         $url = Url::getUrl($country_code, 'token_url');
-        return (new Client())->request('POST', $url, ['form_params' => $param, 'timeout' => 10.0])->getBody()->getContents();
+        return (new Client())->request('POST', $url, ['form_params' => $param, 'timeout' => 10.0, 'connect_timeout' => 10.0])->getBody()->getContents();
     }
 
     public function getAccessTokenByRefreshToken($client_id, $country_code, $client_secret, $refresh_token)
@@ -40,6 +40,6 @@ class Auth
             'refresh_token' => $refresh_token,
         ];
         $url = Url::getUrl($country_code, 'token_url');
-        return (new Client())->request('POST', $url, ['form_params' => $param, 'timeout' => 10.0])->getBody()->getContents();
+        return (new Client())->request('POST', $url, ['form_params' => $param, 'timeout' => 10.0, 'connect_timeout' => 10.0])->getBody()->getContents();
     }
 }
