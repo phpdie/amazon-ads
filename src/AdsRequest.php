@@ -93,6 +93,6 @@ class AdsRequest
             $requestHeaders = array_merge($requestHeaders, $headers);
         }
         $sendRequest = new Request($method, $uri, $requestHeaders, $body);
-        return (new Client())->send($sendRequest)->getBody()->getContents();
+        return (new Client(['timeout' => 10.0]))->send($sendRequest)->getBody()->getContents();
     }
 }
