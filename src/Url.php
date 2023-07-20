@@ -18,7 +18,7 @@ class Url
         'FE' => [
             'api_url' => 'https://advertising-api-fe.amazon.com',
             'auth_grant_url' => 'https://apac.account.amazon.com/ap/oa',
-            'token_url' => 'https://api.amazon.co.jp/auth/o2/token',
+            'token_url' => 'https://api.amazon.com/auth/o2/token',
         ]
     ];
 
