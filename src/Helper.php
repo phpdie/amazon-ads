@@ -22,11 +22,11 @@ class Helper
         $buffer_size = 4096;
         $file = gzopen($file_path, 'r');
         $str = '';
-        while (!gzeof($file)) {
+        while ($file && !gzeof($file)) {
             $str .= gzread($file, $buffer_size);
         }
         gzclose($file);
-        return json_decode($str, true);
+        return $str ? json_decode($str, true) : [];
     }
 
     public static function getReportDataFromUrl(string $url)
