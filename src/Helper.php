@@ -19,7 +19,7 @@ class Helper
 
     public static function readReportFile(string $file_path)
     {
-        $buffer_size = 4096;
+        $buffer_size = 20480;
         $file = gzopen($file_path, 'r');
         $str = '';
         while ($file && !gzeof($file)) {
