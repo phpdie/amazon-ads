@@ -2,8 +2,6 @@
 
 namespace AmazonAdsApi;
 
-use GuzzleHttp\Client;
-
 class Helper
 {
     public static function saveReportFile(string $url, string $save_directory = '')
@@ -12,8 +10,13 @@ class Helper
             $save_directory = $save_directory . DIRECTORY_SEPARATOR;
         }
         $target = $save_directory . pathinfo($url, PATHINFO_FILENAME) . '.gz';
-        $client = new Client();
-        $client->request('GET', $url, ['sink' => $target]);
+        $curl = curl_init();
+        curl_setopt_array($curl, [
+            CURLOPT_URL => $url,
+            CURLOPT_FILE => fopen($target, 'w+'),
+        ]);
+        curl_exec($curl);
+        curl_close($curl);
         return $target;
     }
 

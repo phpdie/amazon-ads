@@ -2,9 +2,6 @@
 
 namespace AmazonAdsApi;
 
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Client;
-
 class AdsRequest
 {
     private $country_code;
@@ -92,7 +89,24 @@ class AdsRequest
         if ($headers) {
             $requestHeaders = array_merge($requestHeaders, $headers);
         }
-        $sendRequest = new Request($method, $uri, $requestHeaders, $body);
-        return (new Client(['timeout' => 300.0, 'connect_timeout' => 300.0]))->send($sendRequest)->getBody()->getContents();
+        $headerArr = [];
+        foreach ($requestHeaders as $key => $val) {
+            $headerArr[] = $key . ':' . $val;
+        }
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $uri,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_TIMEOUT => 10,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => $method,
+            CURLOPT_HTTPHEADER => $headerArr,
+            CURLOPT_POSTFIELDS => $body,
+        ));
+        $response = curl_exec($curl);
+        curl_close($curl);
+        return $response;
     }
 }
